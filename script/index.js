@@ -1,10 +1,7 @@
-require('dotenv').config()
-console.log(process.env.API_KEY)
-
 const button = document.querySelector('.btn-search');
 
 async function searchCity(city) {
-    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}&lang=pt_br&units=metric`).then(response => response.json());
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&lang=pt_br&units=metric`).then(response => response.json());
     showData(data);
 }
 
